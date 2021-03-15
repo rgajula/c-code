@@ -78,5 +78,5 @@ void exec2(){
 	execvp("wc", argv);
 	
 	perror("failed to execute wc -l");
-	exit(14);
+	exit(1);
 }
