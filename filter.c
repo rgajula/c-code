@@ -3,6 +3,7 @@
 #include <errno.h>
 #include <stdlib.h>
 
+//forward declaration
 void exec1();
 void exec2();
 
@@ -12,8 +13,7 @@ int pipe1[2];
 int main(int argc, char  **argv){
 
 	pid_t wpid, pid;
-	int status=0, nbytes;
-	char readbuffer[500];
+	int status=0;
 
 	if (pipe(pipe1) == -1){
 		fprintf(stderr, "failed to create pipe1 %d", errno);
